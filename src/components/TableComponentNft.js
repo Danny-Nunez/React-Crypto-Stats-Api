@@ -55,12 +55,12 @@ const TableComponentNft = () => {
 
   return (
     <>
-      <div className="flex flex-col mt-9 border border-gray-100 rounded">
+      <div className="overflow-auto flex flex-col mt-9 border border-gray-100 rounded-lg shadow ">
         {nftData ? (
-          <table className="w-full table-auto">
+          <table className="w-full table-auto ">
             <thead
               className="capitalize text-base text-white-100 
-            font-medium border-b border-gray-100
+            font-medium border-b-2 border-gray-100
             "
             >
               <tr>

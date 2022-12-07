@@ -32,7 +32,7 @@ const Filters = () => {
       <div className="flex mr-7">
         
 
-        <label className="relative flex justify-center items-center">
+        <label className="hidden sm:block relative flex justify-center items-center">
           <span className="font-bold mr-2">sort by: </span>
           <select
             name="sortby"

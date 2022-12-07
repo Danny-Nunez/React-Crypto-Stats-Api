@@ -55,7 +55,7 @@ const TableComponent = () => {
 
   return (
     <>
-      <div className="flex flex-col mt-9 border border-gray-100 rounded">
+      <div className="overflow-auto flex flex-col mt-9 border border-gray-100 rounded-lg shadow">
         {cryptoData ? (
           <table className="w-full table-auto">
             <thead

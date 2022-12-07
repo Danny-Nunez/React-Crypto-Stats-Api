@@ -28,7 +28,7 @@ const SearchInput = ({ handleSearch }) => {
   return (
     <>
       <form
-        className="w-96 relative flex items-center
+        className="sm:w-48 md:w-96 relative flex items-center
     ml-7 font-nunito
     "
         onSubmit={handleSubmit}

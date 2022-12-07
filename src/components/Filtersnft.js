@@ -24,7 +24,7 @@ const Filtersnft = () => {
 
   return (
     <div
-      className="w-full h-12 border-2 border-gray-100 rounded-lg
+      className=" w-full h-12 border-2 border-gray-100 rounded-lg
     flex items-center justify-between relative
     "
     >
@@ -32,11 +32,11 @@ const Filtersnft = () => {
       <div className="flex mr-7">
         
 
-        <label className="relative flex justify-center items-center">
+        <label className="hidden sm:block relative flex justify-center items-center">
           <span className="font-bold mr-2">sort by: </span>
           <select
             name="sortby"
-            className="rounded bg-gray-200 text-base 
+            className=" rounded bg-gray-200 text-base 
          pl-2 pr-10 py-0.5 leading-4 capitalize focus:outline-0
          "
             onClick={handleSort}
@@ -60,7 +60,7 @@ const Filtersnft = () => {
         </label>
         <button
           className="w-[2rem] ml-4 hover:scale-110 transition-all transition-ease
-        relative
+          relative
         "
           onClick={resetFunction}
         >
