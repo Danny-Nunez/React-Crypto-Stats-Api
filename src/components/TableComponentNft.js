@@ -169,13 +169,13 @@ const TableComponentNft = () => {
           </h1>
         ) : null}
       </div>
-      <div className="flex items-center justify-between mt-4 capitalize h-[2rem]">
+      <div className=" flex items-center justify-between mt-4 capitalize h-[2rem]">
+      <div className="hidden sm:block">
         <span>
-          Data provided by{" "}
-          
-            CoinGecko
+          Data provided by{" "}CoinGecko
           
         </span>
+        </div>
         <Paginationnft />
       </div>
     </>
