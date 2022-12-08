@@ -65,9 +65,9 @@ const TableComponent = () => {
             >
               <tr>
                 <th className="py-1">asset</th>
-                <th className="py-1 hidden sm:block">name</th>
+                <th className="py-1 sm:table-cell hidden">name</th>
                 <th className="py-1">price</th>
-                <th className="py-1 hidden sm:block">total volume</th>
+                <th className="py-1 sm:table-cell hidden">total volume</th>
                 <th className="py-1">market cap change</th>
                 <th className="py-1 lg:table-cell hidden">1H</th>
                 <th className="py-1 lg:table-cell hidden">24H</th>
@@ -96,7 +96,7 @@ const TableComponent = () => {
                         </Link>
                       </span>
                     </td>
-                    <td className="py-4 hidden sm:block">
+                    <td className="py-4 sm:table-cell hidden">
                       <Link to={`/${data.id}`} className="cursor-pointer">
                         {data.name}
                       </Link>
@@ -107,7 +107,7 @@ const TableComponent = () => {
                         currency: currency,
                       }).format(data.current_price)}
                     </td>
-                    <td className="py-4 hidden sm:block">{data.total_volume}</td>
+                    <td className="py-4 sm:table-cell hidden">{data.total_volume}</td>
                     <td className="py-4">
                       {data.market_cap_change_percentage_24h}%
                     </td>
