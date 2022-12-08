@@ -173,7 +173,6 @@ const TableComponent = () => {
       <div className="hidden sm:block">
         <span>
           Data provided by{" "}CoinGecko
-          
         </span>
         </div>
         <Pagination />
