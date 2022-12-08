@@ -10,7 +10,7 @@ const TrendingCoin = ({ data }) => {
 
   return (
     <div
-      className="w-[40%] bg-gray-200 mb-12
+      className="lg:w-[40%] sm:w-[60%] w-[80%] bg-gray-200 mb-12
     last:mb-0 rounded-lg p-4 relative cursor-pointer
     hover:bg-black-100 hover:bg-opacity-40
     "

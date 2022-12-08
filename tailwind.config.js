@@ -3,7 +3,7 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      fontFamily: { Poppin: "Poppin" },
+      fontFamily: { nunito: "Nunito" },
     },
 
     colors: {

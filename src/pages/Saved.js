@@ -62,13 +62,13 @@ const Saved = () => {
             <thead className="capitalize text-base text-gray-100 font-medium border-b border-gray-100 ">
               <tr>
                 <th className="py-1 ">asset</th>
-                <th className="py-1">name</th>
+                <th className="py-1 hidden sm:block">name</th>
                 <th className="py-1">price</th>
-                <th className="py-1">total volume</th>
+                <th className="py-1 hidden sm:block">total volume</th>
                 <th className="py-1">market cap change</th>
-                <th className="py-1">1H</th>
-                <th className="py-1">24H</th>
-                <th className="py-1">7D</th>
+                <th className="py-1 hidden sm:block">1H</th>
+                <th className="py-1 hidden sm:block">24H</th>
+                <th className="py-1 hidden sm:block">7D</th>
               </tr>
             </thead>
             <tbody>
@@ -93,7 +93,7 @@ const Saved = () => {
                           </Link>
                         </span>
                       </td>
-                      <td className="py-4 cursor-pointer">
+                      <td className="py-4 cursor-pointer hidden sm:block">
                         <Link to={`${data.id}`} className="cursor-pointer">
                           {data.name}
                         </Link>
@@ -106,7 +106,7 @@ const Saved = () => {
                           currency: currency,
                         }).format(data.current_price)}
                       </td>
-                      <td className="py-4">{data.total_volume}</td>
+                      <td className="py-4 hidden sm:block">{data.total_volume}</td>
                       <td
                         className={
                           data.market_cap_change_percentage_24h < 0
@@ -122,8 +122,8 @@ const Saved = () => {
                       <td
                         className={
                           data.price_change_percentage_1h_in_currency < 0
-                            ? "py-4 text-red"
-                            : "py-4 text-green"
+                            ? "py-4 text-red hidden sm:block"
+                            : "py-4 text-green hidden sm:block"
                         }
                       >
                         {Number(
@@ -134,8 +134,8 @@ const Saved = () => {
                       <td
                         className={
                           data.price_change_percentage_24h_in_currency < 0
-                            ? "py-4 text-red"
-                            : "py-4 text-green"
+                            ? "py-4 text-red hidden sm:block"
+                            : "py-4 text-green hidden sm:block"
                         }
                       >
                         {Number(
@@ -146,8 +146,8 @@ const Saved = () => {
                       <td
                         className={
                           data.price_change_percentage_7d_in_currency < 0
-                            ? "py-4 text-red"
-                            : "py-4 text-green"
+                            ? "py-4 text-red hidden sm:block"
+                            : "py-4 text-green hidden sm:block"
                         }
                       >
                         {Number(
