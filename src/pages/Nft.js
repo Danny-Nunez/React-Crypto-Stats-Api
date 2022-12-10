@@ -1,12 +1,15 @@
 import React from "react";
+import TrendingScroller from "../components/TrendingScroller";
 import { Outlet } from "react-router-dom";
-import Filtersnft from "../components/Filtersnft";
+// import Filtersnft from "../components/Filtersnft";
 import TableComponentNft from "../components/TableComponentNft";
 
 const Nft = () => {
   return (
     <section className="w-[80%] h-full flex flex-col mt-16 mb-24 relative">
-      <Filtersnft />
+      <TrendingScroller />
+     
+      {/* <Filtersnft /> */}
       <TableComponentNft />
       <Outlet />
     </section>

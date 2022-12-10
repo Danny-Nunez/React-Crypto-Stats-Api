@@ -6,7 +6,7 @@ export const NftContext = createContext({});
 
 // create the provider component
 export const NftProvider = ({ children }) => {
-  const [nftData, setNftData] = useState();
+  const [CryptoData, setCryptoData] = useState();
   const [searchData, setSearchData] = useState();
   const [coinData, setCoinData] = useState();
 
@@ -26,10 +26,10 @@ export const NftProvider = ({ children }) => {
 // there can be 3 errors that we can catch from all three functions, also send the error state 
 // through value prop
 
-  const getNftData = async () => {
+  const getCryptoData = async () => {
     //here we will set an empty string for the data error
     setError({ ...error, data: "" });
-    setNftData();
+    setCryptoData();
     setTotalPages(13220);
     
 
@@ -48,7 +48,7 @@ export const NftProvider = ({ children }) => {
       }).then((json) => json);
 
       // console.log(data);
-      setNftData(data);
+      setCryptoData(data);
     } catch (error) {
       console.log(error);
     }
@@ -91,13 +91,13 @@ export const NftProvider = ({ children }) => {
   };
 
   useLayoutEffect(() => {
-    getNftData();
+    getCryptoData();
   }, [coinSearch, currency, sortBy, page, perPage]);
 
   return (
     <NftContext.Provider
       value={{
-        nftData,
+        CryptoData,
         searchData,
         getSearchResult,
         setCoinSearch,

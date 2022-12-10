@@ -51,12 +51,13 @@ const SaveBtn = ({ data }) => {
 };
 
 const TableComponentNft = () => {
-  let { nftData, currency,error } = useContext(NftContext);
+  let { CryptoData, currency, error } = useContext(NftContext);
 
   return (
     <>
+    
       <div className="overflow-auto flex flex-col mt-9 border border-gray-100 rounded-lg shadow ">
-        {nftData ? (
+        {CryptoData ? (
           <table className="w-full table-auto ">
             <thead
               className="capitalize text-base text-white-100 
@@ -75,7 +76,7 @@ const TableComponentNft = () => {
               </tr>
             </thead>
             <tbody>
-              {nftData.map((data) => {
+              {CryptoData.map((data) => {
                 return (
                   <tr
                     key={data.id}
@@ -172,6 +173,7 @@ const TableComponentNft = () => {
       <div className=" flex items-center justify-between mt-4 capitalize h-[2rem]">
       <div className="hidden sm:block">
         <span>
+          
           Data provided by{" "}CoinGecko
         </span>
         </div>

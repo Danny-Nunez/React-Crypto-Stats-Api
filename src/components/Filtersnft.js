@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Search from "./Search";
+import Searchnft from "./Searchnft";
 // import submitIcon from "../assets/submit-icon.svg";
 import selectIcon from "../assets/select-icon.svg";
 
@@ -28,7 +28,7 @@ const Filtersnft = () => {
     flex items-center justify-between relative
     "
     >
-      <Search />
+      <Searchnft />
       <div className="flex mr-7">
         
 
