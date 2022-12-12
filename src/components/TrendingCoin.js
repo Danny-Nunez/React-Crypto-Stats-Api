@@ -36,7 +36,7 @@ const TrendingCoin = ({ data }) => {
           </h3>
           <h3 className="txt-base flex items-center my-0.5">
             <span className="text-white-100 capitalize">
-              price (in btc):&nbsp;
+              price:&nbsp;
             </span>
             <span className="text-cyan">
               {new Intl.NumberFormat("en-IN", {
@@ -55,7 +55,7 @@ const TrendingCoin = ({ data }) => {
           <img
             src={data.large}
             alt={data.name}
-            className="w-[22%] h-auto rounded-full pr-2 absolute top-2/4 -right-0
+            className="hidden sm:flex w-[22%] h-auto rounded-full pr-2 absolute top-2/4 -right-0
 -translate-y-2/4
 "
           />
