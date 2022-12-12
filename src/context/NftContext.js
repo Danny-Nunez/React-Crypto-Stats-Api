@@ -6,7 +6,7 @@ export const NftContext = createContext({});
 
 // create the provider component
 export const NftProvider = ({ children }) => {
-  const [CryptoData, setCryptoData] = useState();
+  const [cryptoData, setCryptoData] = useState();
   const [searchData, setSearchData] = useState();
   const [coinData, setCoinData] = useState();
 
@@ -26,98 +26,194 @@ export const NftProvider = ({ children }) => {
 // there can be 3 errors that we can catch from all three functions, also send the error state 
 // through value prop
 
-  const getCryptoData = async () => {
-    //here we will set an empty string for the data error
-    setError({ ...error, data: "" });
-    setCryptoData();
-    setTotalPages(13220);
+//   const getCryptoData = async () => {
+//     //here we will set an empty string for the data error
+//     setError({ ...error, data: "" });
+//     setCryptoData();
+//     setTotalPages(13220);
     
 
-    try {
-      const data = await fetch(
-        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=non-fungible-tokens-nft&order=${sortBy}&per_page=${perPage}&page=${page}&sparkline=false&price_change_percentage=1h%2C24h%2C7d`
-      ).then(async (res) => {
-        if (res.ok) {
-          return res.json();
-        }
-        let errorResponse = await res.json();
-        // here we might get the error so it is best to handle it and throw the error
-        // console.log(errorResponse);
-        setError({ ...error, data: errorResponse.error });
-        throw new Error(errorResponse.error);
-      }).then((json) => json);
+//     try {
+//       const data = await fetch(
+//         `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=non-fungible-tokens-nft&order=${sortBy}&per_page=${perPage}&page=${page}&sparkline=false&price_change_percentage=1h%2C24h%2C7d`
+//       ).then(async (res) => {
+//         if (res.ok) {
+//           return res.json();
+//         }
+//         let errorResponse = await res.json();
+//         // here we might get the error so it is best to handle it and throw the error
+//         // console.log(errorResponse);
+//         setError({ ...error, data: errorResponse.error });
+//         throw new Error(errorResponse.error);
+//       }).then((json) => json);
 
-      // console.log(data);
-      setCryptoData(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+//       // console.log(data);
+//       setCryptoData(data);
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   };
 
-  const getCoinData = async (coinid) => {
-    setCoinData();
-    try {
-      const data = await fetch(
-        `https://api.coingecko.com/api/v3/coins/${coinid}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=true&sparkline=false`
-      )
-        .then((res) => res.json())
-        .then((json) => json);
+//   const getCoinData = async (coinid) => {
+//     setCoinData();
+//     try {
+//       const data = await fetch(
+//         `https://api.coingecko.com/api/v3/coins/${coinid}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=true&sparkline=false`
+//       )
+//         .then((res) => res.json())
+//         .then((json) => json);
 
-      // console.log("CoinData", data);
-      setCoinData(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+//       // console.log("CoinData", data);
+//       setCoinData(data);
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   };
 
-  const getSearchResult = async (query) => {
-    try {
-      const data = await fetch(
-        `https://api.coingecko.com/api/v3/search?query=${query}`
-      )
-        .then((res) => res.json())
-        .then((json) => json);
+//   const getSearchResult = async (query) => {
+//     try {
+//       const data = await fetch(
+//         `https://api.coingecko.com/api/v3/search?query=${query}`
+//       )
+//         .then((res) => res.json())
+//         .then((json) => json);
 
-     console.log(data);
-      setSearchData(data.coins);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+//      console.log(data);
+//       setSearchData(data.coins);
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   };
 
-  const resetFunction = () => {
-    setPage(1);
-    setCoinSearch("");
-  };
+//   const resetFunction = () => {
+//     setPage(1);
+//     setCoinSearch("");
+//   };
 
-  useLayoutEffect(() => {
-    getCryptoData();
-  }, [coinSearch, currency, sortBy, page, perPage]);
+//   useLayoutEffect(() => {
+//     getCryptoData();
+//   }, [coinSearch, currency, sortBy, page, perPage]);
 
-  return (
-    <NftContext.Provider
-      value={{
-        CryptoData,
-        searchData,
-        getSearchResult,
-        setCoinSearch,
-        setSearchData,
-        currency,
-        setCurrency,
-        sortBy,
-        setSortBy,
-        page,
-        setPage,
-        totalPages,
-        resetFunction,
-        setPerPage,
-        perPage,
-        getCoinData,
-        coinData,
-        error
-      }}
-    >
-      {children}
-    </NftContext.Provider>
-  );
+//   return (
+//     <NftContext.Provider
+//       value={{
+//         CryptoData,
+//         searchData,
+//         getSearchResult,
+//         setCoinSearch,
+//         setSearchData,
+//         currency,
+//         setCurrency,
+//         sortBy,
+//         setSortBy,
+//         page,
+//         setPage,
+//         totalPages,
+//         resetFunction,
+//         setPerPage,
+//         perPage,
+//         getCoinData,
+//         coinData,
+//         error
+//       }}
+//     >
+//       {children}
+//     </NftContext.Provider>
+//   );
+// };
+
+const getCryptoData = async () => {
+  //here we will set an empty string for the data error
+  setError({ ...error, data: "" });
+  setCryptoData();
+  setTotalPages(13220);
+ 
+
+  try {
+    const data = await fetch(
+      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=non-fungible-tokens-nft&order=${sortBy}&per_page=${perPage}&page=${page}&sparkline=false&price_change_percentage=1h%2C24h%2C7d`
+    ).then(async (res) => {
+      if (res.ok) {
+        return res.json();
+      }
+      let errorResponse = await res.json();
+      // here we might get the error so it is best to handle it and throw the error
+      // console.log(errorResponse);
+      setError({ ...error, data: errorResponse.error });
+      throw new Error(errorResponse.error);
+    }).then((json) => json);
+
+    // console.log(data);
+    setCryptoData(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const getCoinData = async (coinid) => {
+  setCoinData();
+  try {
+    const data = await fetch(
+      `https://api.coingecko.com/api/v3/coins/${coinid}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=true&sparkline=false`
+    )
+      .then((res) => res.json())
+      .then((json) => json);
+
+    // console.log("CoinData", data);
+    setCoinData(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const getSearchResult = async (query) => {
+  try {
+    const data = await fetch(
+      `https://api.coingecko.com/api/v3/search?query=${query}`
+    )
+      .then((res) => res.json())
+      .then((json) => json);
+
+    // console.log(data);
+    setSearchData(data.coins);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const resetFunction = () => {
+  setPage(1);
+  setCoinSearch("");
+};
+
+useLayoutEffect(() => {
+  getCryptoData();
+}, [coinSearch, currency, sortBy, page, perPage]);
+
+return (
+  <NftContext.Provider
+    value={{
+      cryptoData,
+      searchData,
+      getSearchResult,
+      setCoinSearch,
+      setSearchData,
+      currency,
+      setCurrency,
+      sortBy,
+      setSortBy,
+      page,
+      setPage,
+      totalPages,
+      resetFunction,
+      setPerPage,
+      perPage,
+      getCoinData,
+      coinData,
+      error
+    }}
+  >
+    {children}
+  </NftContext.Provider>
+);
 };

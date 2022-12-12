@@ -51,7 +51,7 @@ const PerPage = () => {
 };
 
 const Paginationnft = () => {
-  let { page, setPage, totalPages, perPage, nftData } =
+  let { page, setPage, totalPages, perPage, cryptoData } =
     useContext(NftContext);
 
   const TotalNumber = Math.ceil(totalPages / perPage);
@@ -88,7 +88,7 @@ const Paginationnft = () => {
     }
   };
 
-  if (nftData && nftData.length >= perPage) {
+  if (cryptoData && cryptoData.length >= perPage) {
     return (
       <div className="flex items-center">
         <PerPage />

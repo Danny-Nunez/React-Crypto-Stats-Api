@@ -51,13 +51,13 @@ const SaveBtn = ({ data }) => {
 };
 
 const TableComponentNft = () => {
-  let { CryptoData, currency, error } = useContext(NftContext);
+  let { cryptoData, currency, error } = useContext(NftContext);
 
   return (
     <>
     
       <div className="overflow-auto flex flex-col mt-9 border border-gray-100 rounded-lg shadow ">
-        {CryptoData ? (
+        {cryptoData ? (
           <table className="w-full table-auto ">
             <thead
               className="capitalize text-base text-white-100 
@@ -76,7 +76,7 @@ const TableComponentNft = () => {
               </tr>
             </thead>
             <tbody>
-              {CryptoData.map((data) => {
+              {cryptoData.map((data) => {
                 return (
                   <tr
                     key={data.id}

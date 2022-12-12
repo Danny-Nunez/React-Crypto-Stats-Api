@@ -12,6 +12,7 @@ module.exports = {
       cyan: "#14ffec",
       red: "#d6436e",
       green: "#25da72",
+      yellow: "#f97500"
     },
     fontSize: {
       sm: "14px",

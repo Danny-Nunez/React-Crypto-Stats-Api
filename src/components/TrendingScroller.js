@@ -12,7 +12,7 @@ const TrendingScroller = () => {
 
   return (
     <div>
-      <div className="flex justify-center text-5xl font-extrabold"> <span class="pt-3">HOT PICKS</span> <Player
+      <div className="flex justify-center text-5xl font-extrabold"> <span class="pt-3 text-yellow">HOT PICKS</span> <Player
   autoplay loop src="https://assets10.lottiefiles.com/packages/lf20_x816xbgp.json"
   style={{ height: '40px', width: '40px' }}>
   <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
