@@ -1,7 +1,7 @@
 # React Website: ⭐Rich Crypto Stats App with Tailwind CSS
 <img width="1504" alt="Screen Shot 2022-12-07 at 3 21 42 PM" src="https://user-images.githubusercontent.com/114783191/206287519-199ba25f-e2a6-4945-8f02-57421676a23e.png">
 
-This repository contains final code for Crypto Screener Application in ReactJS. <br />
+This repository contains final code for Crypto Screener Application in ReactJS. The data is pulled with coingecko's api. I learned so much on this project, Major shot out to code bucks for being a great mentor<br />
 
 View Demo👇: <br />
 https://zingy-mousse-974e36.netlify.app/ <br />
