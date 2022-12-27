@@ -143,7 +143,7 @@ const CryptoDetails = () => {
                   </span>
 
                   <h2 className="text-base font-bold ">
-                    {new Intl.NumberFormat("en-IN", {
+                    {new Intl.NumberFormat("en", {
                       style: "currency",
                       currency: currency,
                       minimumFractionDigits: 0,
@@ -157,7 +157,7 @@ const CryptoDetails = () => {
                     </span>
 
                     <h2 className="text-base font-bold">
-                      {new Intl.NumberFormat("en-IN", {
+                      {new Intl.NumberFormat("en", {
                         style: "currency",
                         currency: currency,
                         notation: "compact",
@@ -176,7 +176,7 @@ const CryptoDetails = () => {
                   </span>
 
                   <h2 className="text-base font-bold">
-                    {new Intl.NumberFormat("en-IN", {
+                    {new Intl.NumberFormat("en", {
                       style: "currency",
                       currency: currency,
                       minimumFractionDigits: 0,
@@ -200,7 +200,7 @@ const CryptoDetails = () => {
                   </span>
 
                   <h2 className="text-base font-bold">
-                    {new Intl.NumberFormat("en-IN", {
+                    {new Intl.NumberFormat("en", {
                       style: "currency",
                       currency: currency,
                       minimumFractionDigits: 5,
@@ -229,11 +229,12 @@ const CryptoDetails = () => {
                   </span>
 
                   <h2 className="text-base font-bold">
-                    {new Intl.NumberFormat("en-IN", {
+                    {new Intl.NumberFormat("en", {
                       style: "currency",
                       currency: currency,
                       minimumFractionDigits: 0,
                     }).format(data.market_data.max_supply)}
+                    
                   </h2>
                 </div>
                 <div className="flex flex-col">
@@ -242,7 +243,7 @@ const CryptoDetails = () => {
                   </span>
 
                   <h2 className="text-base font-bold">
-                    {new Intl.NumberFormat("en-IN", {
+                    {new Intl.NumberFormat("en", {
                       style: "currency",
                       currency: currency,
                       minimumFractionDigits: 0,
