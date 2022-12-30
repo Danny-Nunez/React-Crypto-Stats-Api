@@ -14,7 +14,7 @@ The circle button on the top bar will bring the window back to default home scre
 The website is powered by coin gecko api.CoinGecko provides a fundamental analysis of the crypto market. In addition to tracking price, volume and market, CoinGecko tracks community growth, open-source code development, major events and on-chain metrics.
 
 View Demo👇: <br />
-https://crypto-drizzle.netlify.app/ <br />
+https://cryptodrizzle.com/ <br />
 
 ### Resources Used in This Project
 
