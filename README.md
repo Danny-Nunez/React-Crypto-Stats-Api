@@ -22,10 +22,9 @@ https://cryptodrizzle.com/ <br />
 - Icons from https://iconify.design/ <br />
 - API from https://www.coingecko.com/en/api <br />
 
-### External Libraries used in this project:
+### Tech Stack Used:
 
-- [Tailwind css](https://tailwindcss.com/) <br />
-- [recharts](https://recharts.org/en-US/) <br />
+![ReactJS](https://img.shields.io/badge/-ReactJs-000000?logo=react) ![TailwindCSS](https://img.shields.io/badge/-TailwindCSS-black?logo=tailwindcss) ![NodeJS](https://img.shields.io/badge/-NodeJS-black?logo=nodedotjs) ![Axios](https://img.shields.io/badge/-Axios-black?logo=axios) ![Netlify](https://img.shields.io/badge/-Netlify-black?logo=netlify) 
 
 
 
